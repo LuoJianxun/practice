@@ -5,6 +5,7 @@
 
 使用时，直接python rgb2rgba.py -p img_path即可
 这里的img_path换成需要转换的图片的路径
+可选的参数有阈值和是否显示图片，分别对应-t和-s
 
 @author: LuoJianxun
 '''
