@@ -31,9 +31,11 @@ def get_alpha_channel(img, low_hsv, high_hsv):
     # 将RGB色彩空间图片转换为HSV色彩空间图片
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     # 要转变为透明的颜色的最小HSV值
-    low_hsv = np.array([0, 0, 0])
+    # low_hsv = np.array([0, 0, 0])
+    low_hsv = np.array(low_hsv)
     # 要转变为透明的颜色的最大HSV值
-    high_hsv = np.array([180, 255, 46])
+    # high_hsv = np.array([180, 255, 46])
+    high_hsv = np.array(high_hsv)
     # 获取指定颜色区域, 低于lowerb的值和高于upperb的值都会置为0
     # 在lowerb~upperb区间的值会置为255
     mask = cv2.inRange(hsv, lowerb=low_hsv, upperb=high_hsv)
